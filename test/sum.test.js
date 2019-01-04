@@ -1,4 +1,4 @@
-import { sum } from '../commonFunctions/index';
+import { sum } from '../src/index';
 
 describe('Test sum works', () => {
   it('it sums correctly', () => {

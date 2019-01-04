@@ -2,7 +2,7 @@ const slsw = require("serverless-webpack");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  entry: './commonFunctions/index.js',
+  entry: './src/index.js',
   target: "node",
   // Generate sourcemaps for proper error messages
   devtool: 'source-map',
