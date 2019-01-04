@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: common-functions-layer
+service: LAYER_NAME
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:

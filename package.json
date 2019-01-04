@@ -1,8 +1,8 @@
 {
-  "name": "common-functions-layer",
+  "name": "serverless-layer-template",
   "version": "1.1.0",
-  "description": "A Node.js starter for the Serverless Framework with async/await and unit test support",
-  "main": "handler.js",
+  "description": "A template for creating a layer with serverless on AWS with babel7",
+  "main": "src/index.js",
   "scripts": {
     "deploy": "./deploy.sh",
     "test": "jest"
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+    "url": "https://github.com/robcronin/serverless-layer-template"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
