@@ -26,11 +26,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-source-map-support": "^2.0.1",
-    "jest": "^23.6.0",
-    "serverless-offline": "^3.31.3",
-    "serverless-webpack": "^5.2.0",
-    "webpack": "^4.28.3",
-    "webpack-node-externals": "^1.7.2"
+    "jest": "^23.6.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.2.0",
