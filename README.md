@@ -5,6 +5,7 @@ This repo is derived from [AnomalyInnovations/serverless-nodejs-starter](https:/
 It provides the set up to create an AWS lambda layer with serverless using babel 7
 
 Layers can then be used in any of your other lambdas
+
 - e.g. a layer could be common code you use in many lambdas
 
 A template with support for these layers: https://github.com/robcronin/serverless-lambda-with-optional-layer-template
@@ -16,12 +17,11 @@ A template with support for these layers: https://github.com/robcronin/serverles
 
 ## Install
 
-
 ```
 sls install --url https://github.com/robcronin/serverless-layer-template --name [NAME_OF_YOUR_LAYER]
 ```
 
-or 
+or
 
 ```
 git clone https://github.com/robcronin/serverless-layer-template
@@ -40,12 +40,13 @@ By default it is a simple sum function
 ## Deploy
 
 - `yarn deploy` or `./deploy.sh`
-    - This will transpile your code with babel, create the serverless package and deploy it
-    - The output will give you the `arn` you will need in your lambda functions
+  - This will transpile your code with babel, create the serverless package and deploy it
+  - The output will give you the `arn` you will need in your lambda functions
 
 ## Usage
 
 - In your actual lambda elsewhere add this `arn` to your function config:
+
 ```yml
 functions:
   hello:
@@ -57,17 +58,19 @@ functions:
     layers:
       - [YOUR_ARN_HERE]
 ```
+
 - At runtime the code in your layer will now be located at `/opt`
 - If you had deployed the default sum function in this repo, you could then import it with:
+
 ```js
-import { sum } from '/opt/[LAYER_NAME]'
+import { sum } from '/opt/[LAYER_NAME]';
 ```
 
 ## Local usage
 
 - As you are not creating endpoints you can't use the useful `sls invoke` or `sls offline start`
 - If you wish to use your layer locally in another lambda, one solution is to copy your code to your local `/opt`
-    - `./local.sh` will do this for you (requires `sudo` permission)
+  - `./local.sh` will do this for you (requires `sudo` permission)
 - Note: if you use webpack in your main function you may run into issues with this, use https://github.com/robcronin/serverless-lambda-with-optional-layer-template for a working template
 
 ## Tests
