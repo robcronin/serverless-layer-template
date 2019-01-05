@@ -4,8 +4,10 @@ This repo is derived from [AnomalyInnovations/serverless-nodejs-starter](https:/
 
 It provides the set up to create an AWS lambda layer with serverless using babel 7
 
-Layers can then can then be used in any of your other lambdas
+Layers can then be used in any of your other lambdas
 - e.g. a layer could be common code you use in many lambdas
+
+A template with support for these layers: https://github.com/robcronin/serverless-lambda-with-optional-layer-template
 
 ## Requirements
 
@@ -66,7 +68,7 @@ import { sum } from '/opt/[LAYER_NAME]'
 - As you are not creating endpoints you can't use the useful `sls invoke` or `sls offline start`
 - If you wish to use your layer locally in another lambda, one solution is to copy your code to your local `/opt`
     - `./local.sh` will do this for you (requires `sudo` permission)
-- Note: if you use webpack in your main function you may run into issues with this (repo with template for this in progress)
+- Note: if you use webpack in your main function you may run into issues with this, use https://github.com/robcronin/serverless-lambda-with-optional-layer-template for a working template
 
 ## Tests
 
