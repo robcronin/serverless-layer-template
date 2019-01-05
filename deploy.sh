@@ -1,9 +1,14 @@
 #!/bin/bash
 
 echo 'ℹ️  Transforming files with babel ℹ️'
+rm -rf deploy-temp
 mkdir deploy-temp
 yarn babel src --out-dir deploy-temp/LAYER_NAME
 echo '✅  Transform complete ✅'
+
+echo 'ℹ️  Installing yarn dependencies ℹ️'
+yarn install --modules-folder deploy-temp/node_modules --production=true
+echo '✅  Installed yarn dependencies ✅'
 
 echo 'ℹ️  Zipping files ℹ️'
 cd deploy-temp
