@@ -4,6 +4,8 @@ This repo is derived from [AnomalyInnovations/serverless-nodejs-starter](https:/
 
 It provides the set up to create an AWS lambda layer with serverless using babel 7
 
+- jest, eslint and prettier configured
+
 Layers can then be used in any of your other lambdas
 
 - e.g. a layer could be common code you use in many lambdas
@@ -75,4 +77,7 @@ import { sum } from '/opt/[LAYER_NAME]';
 
 ## Tests
 
+`yarn test` will run:
+
+- `yarn lint`
 - `yarn jest`
