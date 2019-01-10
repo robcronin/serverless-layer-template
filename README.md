@@ -12,6 +12,8 @@ Layers can then be used in any of your other lambdas
 
 A template with support for these layers: https://github.com/robcronin/serverless-lambda-with-optional-layer-template
 
+For an example repo of a lambda with a layer created with these templates see [here](https://github.com/robcronin/lambda-with-layer-example)
+
 ## Requirements
 
 - [Install the Serverless Framework](https://serverless.com/framework/docs/providers/aws/guide/installation/)
