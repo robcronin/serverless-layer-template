@@ -75,7 +75,7 @@ import { sum } from '/opt/[LAYER_NAME]';
 - As you are not creating endpoints you can't use the useful `sls invoke` or `sls offline start`
 - If you wish to use your layer locally in another lambda, one solution is to copy your code to your local `/opt`
   - `./local.sh` will do this for you (requires `sudo` permission)
-  - While developing the code in your layer you can use `yarn watch` which will run `local.sh` after any file changes
+  - While developing the code in your layer you can use `yarn watch` which will run `local.sh` after any file changes (requires `sudo` permission)
 - Note: if you use webpack in your main function you may run into issues with this, use https://github.com/robcronin/serverless-lambda-with-optional-layer-template for a working template
 
 ## Tests
